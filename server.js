@@ -3,6 +3,7 @@ const express=require("express")
 //2.Associate the express methods to a variable
 const app=express()
 
+app.use(express.json())
 //route
 // app.get("/",(req,res)=>{
 //     res.send("home page")
@@ -30,8 +31,9 @@ app.use("/api/users",require("./routes/api/users"))
 
 
 
+
 //3.create a variable Port
-const port=5001
+const port=3000
 //4.listen to the port
 app.listen(port,err=>{
     err?console.log('err') :console.log(`server is running on port ${port}`)
